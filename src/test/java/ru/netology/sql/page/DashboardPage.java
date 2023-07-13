@@ -10,7 +10,7 @@ public class DashboardPage {
     public DashboardPage() {
 
         SelenideElement dashboardHeading = $("[data-test-id=dashboard]");
-        dashboardHeading.shouldHave(Condition.exactText("  Личный кабинет")).shouldBe(Condition.visible);
+        dashboardHeading.shouldHave(Condition.exactText("Личный кабинет")).shouldBe(Condition.visible);
 
     }
 
