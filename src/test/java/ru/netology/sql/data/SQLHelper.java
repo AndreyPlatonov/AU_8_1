@@ -34,7 +34,7 @@ public class SQLHelper {
     @SneakyThrows
     public static DataHelper.VerificationCode getVerificationCode() {
 
-        var codeSQl = "SELECT code FROM AUTH_CODES ORDER BY CREATED DESC LIMIT 1";
+        var codeSQl = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";
         var conn = getConn();
         var code = runner.query(conn, codeSQl, new ScalarHandler<String>());
         return new DataHelper.VerificationCode(code);
